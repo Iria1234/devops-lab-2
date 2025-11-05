@@ -48,6 +48,8 @@ jobs:
             path: |
                 test-results.txt
                 retention-days: 1
+      - name: Print Environment
+        run: echo "Running in ${{ github.event.inputs.environment }}"
 
   report:
     needs: test
